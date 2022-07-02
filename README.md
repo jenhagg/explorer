@@ -5,6 +5,7 @@
 Initial setup
 
 ```bash
+git clone https://github.com/Breakthrough-Energy/PowerSimData.git
 git clone https://github.com/jenhagg/explorer.git
 cd explorer
 mkdir data

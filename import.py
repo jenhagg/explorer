@@ -6,8 +6,6 @@ from pathlib import Path
 root = Path.cwd() / "data"
 ofs = fs.open_fs(str(root))
 
-conn = sqlite3.connect("tamu.db")
-
 
 def iter_df():
     for csv in ofs.walk.files():
@@ -18,6 +16,7 @@ def iter_df():
 
 
 def create_db():
+    conn = sqlite3.connect("tamu.db")
     for df, table in iter_df():
         df.to_sql(table, conn, if_exists="replace", index=False)
 
