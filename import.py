@@ -26,3 +26,7 @@ def columns():
             df = pd.read_csv(f)
             cols[table] = df.columns
     return cols
+
+
+if __name__ == "__main__":
+    create_db()
